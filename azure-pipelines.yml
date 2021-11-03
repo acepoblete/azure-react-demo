@@ -27,7 +27,7 @@ steps:
     
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: 'build/**' # Pull the build directory (React)
+    rootFolderOrFile: '$(System.DefaultWorkingDirectory)/build/**' # Pull the build directory (React)
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
